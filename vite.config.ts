@@ -3,5 +3,5 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
   plugins: [svelte()],
-  base: "web", // Replace 'your-repo-name' with your actual GitHub repository name
+  base: "/web/", // GitHub Pages base path
 });
