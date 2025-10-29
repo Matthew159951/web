@@ -72,7 +72,8 @@
     }
   }
 
-  function openVideoModal(video: string, poster?: string) {
+  function openVideoModal(video: string | undefined, poster?: string) {
+    if (!video) return;
     selectedVideo = video;
     selectedVideoPoster = poster || null;
     showVideoModal = true;
