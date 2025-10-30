@@ -26,10 +26,8 @@
       <div class="footer-section">
         <h4>Connect</h4>
         <ul class="footer-links">
-          <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-          <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
-          <li><a href="mailto:your.email@example.com">Email</a></li>
+          <li><a href="https://github.com/matthew159951" target="_blank">GitHub</a></li>
+          <li><a href="mailto:23214759@life.hkbu.edu.hk">Email</a></li>
         </ul>
       </div>
     </div>

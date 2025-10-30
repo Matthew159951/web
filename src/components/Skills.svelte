@@ -66,8 +66,7 @@
   const tools = [
     { name: "VS Code", icon: "💻" },
     { name: "Git", icon: "📦" },
-    { name: "Docker", icon: "🐳" },
-    { name: "Postman", icon: "📮" },
+    
     { name: "Figma", icon: "🎨" },
     { name: "Azure Portal", icon: "☁️" }
   ];

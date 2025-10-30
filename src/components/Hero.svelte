@@ -35,13 +35,15 @@
       <p class="hero-description">
         Fresh graduate from <strong>Hong Kong Baptist University</strong> specializing in 
         building scalable applications with <span class="tech-highlight">Vue.js</span>, 
+        <span class="tech-highlight">Svelte</span>,
+        <span class="tech-highlight">TypeScript</span>,
         <span class="tech-highlight">Node.js</span>, and 
         <span class="tech-highlight">Azure</span> cloud services.
       </p>
       
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-value">10+</div>
+          <div class="stat-value"> 2</div>
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat">

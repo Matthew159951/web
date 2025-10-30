@@ -3,6 +3,7 @@
   import Fyp_image1 from '../static/fyp1.png';
   import Fyp_image2 from '../static/fyp2.png';
   import Fyp_poster from '../static/fyp-poster.png';
+  import project_img1 from '../static/project.png';
   import { onMount } from 'svelte';
 
   interface Project {
@@ -26,10 +27,11 @@
       videoPoster: Fyp_poster
     },
     {
-      title: "Full-Stack Web Application with Vue.js",
-      description: "Developed a responsive web application using Vue.js framework with Express.js backend. Implemented RESTful API endpoints, user authentication, and real-time data synchronization. Utilized MySQL for relational data management.",
-      tags: ["Vue.js", "Express.js", "Node.js", "MySQL", "JavaScript", "HTML & CSS"],
-      github: "https://github.com/yourusername/vue-app"
+      title: "Student Portfolio Website",
+      description: "Developed a responsive Student Portfolio Website using Svelte framework with Node.js backend. ",
+      tags: ["Svelte", "Node.js",  "TypeScript", "HTML & CSS"],
+      images: [project_img1],
+      github: "https://github.com/Matthew159951/web"
     }
   ];
 

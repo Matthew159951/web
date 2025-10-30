@@ -19,10 +19,9 @@
   }
 
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/yourusername', icon: '🐙' },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: '💼' },
-    { name: 'Twitter', url: 'https://twitter.com/yourusername', icon: '🐦' },
-    { name: 'Email', url: 'mailto:your.email@example.com', icon: '📧' }
+    { name: 'GitHub', url: 'https://github.com/matthew159951', icon: '🐙' },
+
+    { name: 'Email', url: 'mailto:23214759@life.hkbu.edu.hk', icon: '📧' }
   ];
 </script>
 
