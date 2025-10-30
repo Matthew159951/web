@@ -11,7 +11,7 @@
 <header class:scrolled>
   <nav>
     <div class="logo">
-      <span class="bracket">&lt;</span>CS Student<span class="bracket">/&gt;</span>
+      <span class="bracket">&lt;</span>Code.Matthew<span class="bracket">/&gt;</span>
     </div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>

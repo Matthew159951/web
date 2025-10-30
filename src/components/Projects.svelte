@@ -19,7 +19,7 @@
 
   const projects: Project[] = [
     {
-      title: "Cloud-based Near-line Video Q&A elearning Platform",
+      title: "Cloud-based Near-line Video Q&A E-learning Platform",
       description: "Final Year Project at HKBU - An innovative cloud platform enabling students to upload screen capture videos or images of questions for lab work and debugging. Integrates Azure OpenAI for intelligent responses, Speech-to-Text for accessibility, and MongoDB for scalable data management. Developed a real-time communication system connecting students, TAs, and instructors.",
       tags: ["Svelte", "Node.js", "MongoDB", "Azure OpenAI","TypeScript","Speech to Text","Express.js","Cosmos DB","Final Year Project"],
       images: [Fyp_image1, Fyp_image2, Fyp_poster],
@@ -28,7 +28,7 @@
     },
     {
       title: "Student Portfolio Website",
-      description: "Developed a responsive Student Portfolio Website using Svelte framework with Node.js backend. ",
+      description: "Developed a responsive student portfolio website using Svelte framework with Node.js backend.",
       tags: ["Svelte", "Node.js",  "TypeScript", "HTML & CSS"],
       images: [project_img1],
       github: "https://github.com/Matthew159951/web"

@@ -7,7 +7,7 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3 class="footer-logo">
-          <span class="bracket">&lt;</span>CS Student<span class="bracket">/&gt;</span>
+          <span class="bracket">&lt;</span>Code.Matthew<span class="bracket">/&gt;</span>
         </h3>
         <p>Building the future, one line of code at a time.</p>
       </div>
