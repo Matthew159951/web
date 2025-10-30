@@ -33,7 +33,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {currentYear} CS Student Portfolio. Built with Svelte & TypeScript.</p>
+      <p>&copy; {currentYear} Matthew Portfolio. Built with Svelte & TypeScript.</p>
     </div>
   </div>
 </footer>

@@ -44,11 +44,15 @@
   
   onMount(() => {
     projects.forEach((project, index) => {
-      if (project.images && project.images.length > 1) {
-        currentImageIndex[index] = 0;
-        setInterval(() => {
-          currentImageIndex[index] = (currentImageIndex[index] + 1) % project.images!.length;
-        }, 3000);
+      if (project.images && project.images.length > 0) {
+        currentImageIndex[index] = 0; // Initialize for all projects with images
+        
+        if (project.images.length > 1) {
+          // Only set up auto-rotation for multiple images
+          setInterval(() => {
+            currentImageIndex[index] = (currentImageIndex[index] + 1) % project.images!.length;
+          }, 3000);
+        }
       }
     });
   });

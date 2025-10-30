@@ -5,22 +5,23 @@
     message: ''
   };
 
-  let submitted = false;
-
   function handleSubmit(e: Event) {
     e.preventDefault();
-    // Handle form submission (you can add your own logic here)
-    console.log('Form submitted:', formData);
-    submitted = true;
-    setTimeout(() => {
-      submitted = false;
-      formData = { name: '', email: '', message: '' };
-    }, 3000);
+    
+    // Create mailto link
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:23214759@life.hkbu.edu.hk?subject=${subject}&body=${body}`;
+    
+    // Reset form
+    formData = { name: '', email: '', message: '' };
   }
 
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/matthew159951', icon: '🐙' },
-
     { name: 'Email', url: 'mailto:23214759@life.hkbu.edu.hk', icon: '📧' }
   ];
 </script>
@@ -48,12 +49,6 @@
       </div>
 
       <form class="contact-form" on:submit={handleSubmit}>
-        {#if submitted}
-          <div class="success-message">
-            ✓ Thank you! Your message has been sent.
-          </div>
-        {/if}
-        
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -232,16 +227,6 @@
   .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-  }
-
-  .success-message {
-    background: #10b981;
-    color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: 600;
   }
 
   @media (prefers-color-scheme: dark) {
