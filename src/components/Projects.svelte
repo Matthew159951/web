@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Fyp_video from '../static/fyp-demo.mp4';
+  // Remove the video import
   import Fyp_image1 from '../static/fyp1.png';
   import Fyp_image2 from '../static/fyp2.png';
   import Fyp_poster from '../static/fyp-poster.png';
@@ -13,8 +13,7 @@
     github?: string;
     demo?: string;
     images?: string[];
-    video?: string;
-    videoPoster?: string;
+    youtubeId?: string;
   }
 
   const projects: Project[] = [
@@ -23,8 +22,7 @@
       description: "Final Year Project at HKBU - An innovative cloud platform enabling students to upload screen capture videos or images of questions for lab work and debugging. Integrates Azure OpenAI for intelligent responses, Speech-to-Text for accessibility, and MongoDB for scalable data management. Developed a real-time communication system connecting students, TAs, and instructors.",
       tags: ["Svelte", "Node.js", "MongoDB", "Azure OpenAI","TypeScript","Speech to Text","Express.js","Cosmos DB","Final Year Project"],
       images: [Fyp_image1, Fyp_image2, Fyp_poster],
-      video: Fyp_video,
-      videoPoster: Fyp_poster
+      youtubeId: "dr1VgE6dQRo"
     },
     {
       title: "Student Portfolio Website",
@@ -39,8 +37,7 @@
   let selectedProject: Project | null = null;
   let selectedImageIndex: number = 0;
   let showVideoModal: boolean = false;
-  let selectedVideo: string | null = null;
-  let selectedVideoPoster: string | null = null;
+  let selectedYoutubeId: string | null = null;
   
   onMount(() => {
     projects.forEach((project, index) => {
@@ -78,17 +75,15 @@
     }
   }
 
-  function openVideoModal(video: string | undefined, poster?: string) {
-    if (!video) return;
-    selectedVideo = video;
-    selectedVideoPoster = poster || null;
+  function openVideoModal(youtubeId: string | undefined) {
+    if (!youtubeId) return;
+    selectedYoutubeId = youtubeId;
     showVideoModal = true;
   }
 
   function closeVideoModal() {
     showVideoModal = false;
-    selectedVideo = null;
-    selectedVideoPoster = null;
+    selectedYoutubeId = null;
   }
 </script>
 
@@ -139,8 +134,8 @@
             </div>
           </div>
           <div class="project-links">
-            {#if project.video}
-              <button class="project-link video-btn" on:click={() => openVideoModal(project.video, project.videoPoster)}>
+            {#if project.youtubeId}
+              <button class="project-link video-btn" on:click={() => openVideoModal(project.youtubeId)}>
                 <span>▶ Watch Demo Video</span>
               </button>
             {:else}
@@ -213,20 +208,21 @@
   </div>
 {/if}
 
-{#if showVideoModal && selectedVideo}
+{#if showVideoModal && selectedYoutubeId}
   <div class="modal-overlay" on:click={closeVideoModal}>
     <div class="video-modal-content" on:click|stopPropagation>
       <button class="close-btn" on:click={closeVideoModal} aria-label="Close">×</button>
       <div class="video-container">
-        <video 
-          controls 
-          autoplay 
-          poster={selectedVideoPoster}
-          class="demo-video"
-        >
-          <source src={selectedVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <iframe 
+          width="100%" 
+          height="100%" 
+          src={`https://www.youtube.com/embed/${selectedYoutubeId}?autoplay=1`}
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </div>
@@ -665,8 +661,9 @@
   .video-modal-content {
     background: #000;
     border-radius: 16px;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 95vw;
+    max-height: 95vh;
+    width: 1400px;
     position: relative;
     overflow: hidden;
     border: 4px solid #667eea;
@@ -675,17 +672,17 @@
 
   .video-container {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16/9;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 600px;
   }
 
-  .demo-video {
+  .video-container iframe {
     width: 100%;
-    height: auto;
-    max-height: 90vh;
-    display: block;
+    height: 100%;
+    border: none;
   }
 
   @media (max-width: 768px) {
@@ -727,12 +724,13 @@
 
     .video-modal-content {
       max-width: 95vw;
+      width: 100%;
       border: 3px solid #667eea;
       box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.2), 0 25px 50px rgba(0, 0, 0, 0.5);
     }
 
-    .demo-video {
-      max-height: 80vh;
+    .video-container {
+      min-height: auto;
     }
   }
 </style>
