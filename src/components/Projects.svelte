@@ -4,6 +4,7 @@
   import Fyp_image2 from '../static/fyp2.png';
   import Fyp_poster from '../static/fyp-poster.png';
   import project_img1 from '../static/project.png';
+  import lrt_image1 from '../static/lrt.png';
   import { onMount } from 'svelte';
 
   interface Project {
@@ -30,6 +31,14 @@
       tags: ["Svelte", "Node.js",  "TypeScript", "HTML & CSS"],
       images: [project_img1],
       github: "https://github.com/Matthew159951/web"
+    },
+    {
+      title: "LRT Next Train - Hong Kong Light Rail Tracker",
+      description: "Real-time Light Rail arrival tracker for Hong Kong's Tuen Mun and Yuen Long network. Features bilingual station search, live 20-second updates, and detailed train information including platform assignments, coupled train indicators, and arrival countdowns. Built with React and integrated with MTR's official open data API.",
+      tags: ["React", "TypeScript", "Axios", "Real-time Updates", "Hong Kong Transport", "Vite", "Public API Integration"],
+      github: "https://github.com/Matthew159951/lrt-next-train-web",
+      demo: "https://lrt-next-train-web.23214759.workers.dev/",
+      images: [lrt_image1]
     }
   ];
 
