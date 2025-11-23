@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  
+  import { projectCount } from '../lib/projectsData';
   let visible = false;
 
   onMount(() => {
@@ -43,7 +43,7 @@
       
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-value"> 2</div>
+          <div class="stat-value">{projectCount}</div>
           <div class="stat-label">Projects</div>
         </div>
         <div class="stat">
